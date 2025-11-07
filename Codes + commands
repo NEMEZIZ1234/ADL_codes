@@ -1,6 +1,29 @@
 Q1).To understand and implement the concept of a pipeline by using GitHub as a platform for continuous integration and deployment on a sample application.
 Link: https://github.com/imoisharma/aws-codepipeline-s3-codedeploy-linux-2.0
 
+name: CI Pipeline
+on:
+ push:
+  branches: [ "main" ]
+ pull_request:
+  branches: [ "main" ]
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v3
+  - name: Set up Node.js
+    uses: actions/setup-node@v3
+    with:
+     node-version: '16'
+  - name: Install dependencies
+    run: npm install
+  - name: Run tests
+    run: npm test
+
+
+
 Q2).To install terraform on a Windows/Linux machine and build, apply, and destroy EC2 instance over AWS using Terraform.
 
 Code:

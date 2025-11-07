@@ -1,6 +1,7 @@
 Q1).To understand and implement the concept of a pipeline by using GitHub as a platform for continuous integration and deployment on a sample application.
 Link: https://github.com/imoisharma/aws-codepipeline-s3-codedeploy-linux-2.0
 
+.gitHub/workflow/ci-cd-pipeline.yml
 name: CI Pipeline
 on:
  push:
